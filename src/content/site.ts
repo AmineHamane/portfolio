@@ -251,7 +251,7 @@ export const site: SiteContent = {
         },
       ],
       repoPath: "Forex_algo/code",
-      links: [{ label: "GitHub", href: GITHUB_URL, kind: "github" }],
+      links: [{ label: "GitHub", href: "https://github.com/AmineHamane/forex-ai-trading", kind: "github" }],
     },
 
     {
