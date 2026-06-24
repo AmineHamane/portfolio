@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — "engineer / quant terminal" aesthetic
+   Near-black canvas, cyan + lime data-viz accents, mono labels
+   ============================================================ */
+@theme {
+  --color-bg: #070a0f;
+  --color-bg-soft: #0a0e14;
+  --color-surface: #0e141d;
+  --color-surface-2: #131b26;
+  --color-border: #1c2632;
+  --color-border-soft: #161f2a;
+
+  --color-fg: #e6edf3;
+  --color-fg-muted: #93a1b0;
+  --color-fg-dim: #8190a0; /* WCAG AA (>=4.5:1) on bg and surface */
+
+  --color-accent: #22d3ee; /* cyan */
+  --color-accent-soft: #0e7490;
+  --color-lime: #a3e635; /* lime — "up / gains" */
+  --color-rose: #fb7185; /* down / risk */
+  --color-violet: #a78bfa;
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --radius: 14px;
+
+  --shadow-glow-cyan: 0 0 0 1px rgba(34, 211, 238, 0.15), 0 8px 40px -12px rgba(34, 211, 238, 0.35);
+  --shadow-card: 0 1px 0 0 rgba(255, 255, 255, 0.03) inset, 0 20px 50px -24px rgba(0, 0, 0, 0.8);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-pulse-slow: pulseSlow 4s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: #fff;
+}
+
+/* Slim custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-2);
+  border-radius: 8px;
+  border: 2px solid var(--color-bg);
+}
+::-webkit-scrollbar-thumb:hover { background: #1f2a38; }
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+
+/* Animated dotted/grid backdrop */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.bg-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Radial spotlight masks for hero glow */
+.mask-fade-b {
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-fg) 0%, var(--color-accent) 55%, var(--color-lime) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(34, 211, 238, 0.45);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.card {
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg-soft) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.card-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s, box-shadow 0.35s;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--color-fg-muted);
+  white-space: nowrap;
+}
+
+.glass {
+  background: rgba(10, 14, 20, 0.6);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.18), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.4s linear infinite;
+}
+
+/* Focus-visible accessibility ring */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print: used by the /cv route to export a clean PDF */
+@page {
+  size: letter;
+  margin: 12mm;
+}
+@media print {
+  .no-print { display: none !important; }
+  html, body { background: #fff !important; }
+  .cv-sheet {
+    box-shadow: none !important;
+    margin: 0 !important;
+    border: none !important;
+    max-width: none !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+  .cv-avoid-break { break-inside: avoid; }
+  /* Stack the CV columns when printing so content can't misalign across pages. */
+  .cv-grid { display: block !important; }
+  .cv-grid > * { margin-top: 0 !important; }
+}
+
+/* Skip-to-content link: hidden until focused */
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 200;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
