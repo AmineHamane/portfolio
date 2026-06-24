@@ -575,7 +575,7 @@ export const site: SiteContent = {
         { label: { en: "Terraform cloud targets", fr: "Cibles cloud Terraform" }, value: "5" },
       ],
       repoPath: "cours-data",
-      links: [{ label: "GitHub", href: GITHUB_URL, kind: "github" }],
+      links: [{ label: "GitHub", href: "https://github.com/AmineHamane/data-engineering", kind: "github" }],
     },
 
     {
