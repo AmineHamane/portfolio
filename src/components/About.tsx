@@ -42,7 +42,7 @@ export function About() {
             <span className="mono-label">{ui("aboutEyebrow")}</span>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="mt-3 font-[family-name:var(--font-space-grotesk)] text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-3 font-[family-name:var(--font-inter)] text-3xl font-semibold tracking-tight sm:text-4xl">
               {t(site.about.heading)}
             </h2>
           </Reveal>
@@ -55,7 +55,7 @@ export function About() {
           {site.stats.map((s, i) => (
             <Reveal key={i} delay={i * 0.08}>
               <div className="card card-hover h-full p-5">
-                <div className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold tracking-tight text-fg sm:text-5xl">
+                <div className="font-[family-name:var(--font-inter)] text-4xl font-bold tracking-tight text-fg sm:text-5xl">
                   <StatValue value={s.value} />
                 </div>
                 <div className="mt-2 text-sm text-fg-muted">{t(s.label)}</div>

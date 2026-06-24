@@ -260,7 +260,7 @@ export const site: SiteContent = {
       category: "web-app",
       status: "prototype",
       featured: true,
-      accent: "violet",
+      accent: "purple",
       tagline: {
         en: "A SaaS platform for marketplace research & monitoring, built on a Python microservices backend.",
         fr: "Une plateforme SaaS de recherche et de surveillance de marketplace, bâtie sur un backend microservices Python.",
@@ -359,7 +359,7 @@ export const site: SiteContent = {
       category: "nlp",
       status: "prototype",
       featured: true,
-      accent: "rose",
+      accent: "pink",
       tagline: {
         en: "An NLP-driven product recommender built on Amazon review sentiment.",
         fr: "Un recommandeur de produits piloté par NLP, basé sur le sentiment des avis Amazon.",
@@ -584,7 +584,7 @@ export const site: SiteContent = {
       category: "coursework",
       status: "coursework",
       featured: false,
-      accent: "violet",
+      accent: "purple",
       tagline: {
         en: "End-to-end data-science fundamentals, from Python and statistics to neural networks.",
         fr: "Les fondamentaux de la science des données de bout en bout, de Python et des statistiques aux réseaux de neurones.",

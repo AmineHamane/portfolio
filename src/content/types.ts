@@ -5,7 +5,7 @@ export type LS = { en: string; fr: string };
 /** A list of strings with both language variants. */
 export type LL = { en: string[]; fr: string[] };
 
-export type Accent = "cyan" | "lime" | "violet" | "rose";
+export type Accent = "cyan" | "lime" | "purple" | "pink";
 
 export type ProjectCategory =
   | "flagship"

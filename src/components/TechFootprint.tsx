@@ -53,7 +53,7 @@ export function TechFootprint() {
               <div className="relative h-2.5 flex-1 overflow-hidden rounded-full bg-surface-2">
                 <motion.div
                   className="absolute inset-y-0 left-0 rounded-full"
-                  style={{ background: "linear-gradient(90deg, #22d3ee, #a3e635)" }}
+                  style={{ background: "linear-gradient(90deg, #814ac8, #df7afe)" }}
                   initial={{ width: reduce ? `${b.pct}%` : 0 }}
                   whileInView={{ width: `${b.pct}%` }}
                   viewport={{ once: true, margin: "-40px" }}

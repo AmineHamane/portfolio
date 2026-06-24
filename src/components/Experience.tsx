@@ -24,7 +24,7 @@ export function Experience() {
                 </span>
                 <div className="card p-5 sm:p-6">
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                    <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-fg">
+                    <h3 className="font-[family-name:var(--font-inter)] text-lg font-semibold text-fg">
                       {t(job.role)}
                     </h3>
                     <span className="font-[family-name:var(--font-jetbrains-mono)] text-xs text-accent">{job.period}</span>
@@ -57,7 +57,7 @@ export function Experience() {
             </div>
             {site.education.map((e, i) => (
               <div key={i} className="mt-4">
-                <div className="font-[family-name:var(--font-space-grotesk)] text-base font-semibold text-fg">
+                <div className="font-[family-name:var(--font-inter)] text-base font-semibold text-fg">
                   {t(e.degree)}
                 </div>
                 <div className="text-sm text-fg-muted">{e.school}</div>

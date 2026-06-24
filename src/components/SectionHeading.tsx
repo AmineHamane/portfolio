@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal } from "./Reveal";
+import { Eyebrow } from "./ui";
 
 export function SectionHeading({
   eyebrow,
@@ -14,10 +15,10 @@ export function SectionHeading({
   return (
     <div className="mb-12 max-w-2xl">
       <Reveal>
-        <span className="mono-label">{eyebrow}</span>
+        <Eyebrow>{eyebrow}</Eyebrow>
       </Reveal>
       <Reveal delay={0.05}>
-        <h2 className="mt-3 font-[family-name:var(--font-space-grotesk)] text-3xl font-semibold tracking-tight text-fg sm:text-4xl md:text-[2.75rem]">
+        <h2 className="mt-4 text-3xl font-bold tracking-tight text-fg sm:text-4xl md:text-[2.75rem] md:leading-[1.1]">
           {heading}
         </h2>
       </Reveal>

@@ -6,7 +6,7 @@ import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { GithubIcon } from "@/components/icons";
 
-const INK = "#0e7490"; // print-safe teal accent
+const INK = "#6d28d9"; // print-safe brand violet
 
 export default function CVPage() {
   const { t, tl, ui, site, locale, setLocale } = useI18n();
@@ -58,12 +58,12 @@ export default function CVPage() {
       {/* Sheet */}
       <article
         className="cv-sheet mx-auto my-6 w-full max-w-[850px] bg-white px-8 py-9 text-slate-800 shadow-2xl sm:my-8 sm:px-12 sm:py-12"
-        style={{ fontFamily: "var(--font-geist-sans)" }}
+        style={{ fontFamily: "var(--font-inter)" }}
         lang={locale}
       >
         {/* Header */}
         <header className="border-b-2 pb-5" style={{ borderColor: INK }}>
-          <h1 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h1 className="font-[family-name:var(--font-inter)] text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             {id.name}
           </h1>
           <p className="mt-1 text-sm font-medium sm:text-base" style={{ color: INK }}>
@@ -185,7 +185,7 @@ function Section({ title, ink, children }: { title: string; ink: string; childre
   return (
     <section className="mt-6">
       <h2
-        className="mb-2.5 font-[family-name:var(--font-space-grotesk)] text-[0.78rem] font-bold uppercase tracking-[0.12em]"
+        className="mb-2.5 font-[family-name:var(--font-inter)] text-[0.78rem] font-bold uppercase tracking-[0.12em]"
         style={{ color: ink }}
       >
         {title}

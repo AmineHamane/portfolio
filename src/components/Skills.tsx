@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { useI18n } from "@/lib/i18n";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { BRAND_GRADIENT } from "./ui";
 
 const ICONS: Record<string, LucideIcon> = { brain: Brain, server: Server, database: Database };
 
@@ -23,10 +24,13 @@ export function Skills() {
             <Reveal key={gi} delay={gi * 0.1}>
               <div className="card card-hover group flex h-full flex-col p-6">
                 <div className="flex items-center gap-3">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl border border-accent/30 bg-accent/10 text-accent">
+                  <span
+                    className="grid h-11 w-11 place-items-center rounded-xl text-white"
+                    style={{ backgroundImage: BRAND_GRADIENT, boxShadow: "0 0 24px -12px rgba(223,122,254,0.7)" }}
+                  >
                     <Icon className="h-5 w-5" />
                   </span>
-                  <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg font-semibold">
+                  <h3 className="font-[family-name:var(--font-inter)] text-lg font-semibold">
                     {t(group.name)}
                   </h3>
                 </div>

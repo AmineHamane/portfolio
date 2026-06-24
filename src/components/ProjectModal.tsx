@@ -119,7 +119,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
                   {ui(STATUS_UI[project.status])}
                 </span>
               </div>
-              <h3 className="mt-2 font-[family-name:var(--font-space-grotesk)] text-2xl font-bold tracking-tight">
+              <h3 className="mt-2 font-[family-name:var(--font-inter)] text-2xl font-bold tracking-tight">
                 {project.name}
               </h3>
             </div>
@@ -158,7 +158,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {project.metrics.map((m, i) => (
                   <div key={i} className="rounded-xl border border-border bg-surface p-3">
-                    <div className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold" style={{ color: hex }}>
+                    <div className="font-[family-name:var(--font-inter)] text-xl font-bold" style={{ color: hex }}>
                       {m.value}
                     </div>
                     <div className="mt-1 text-[0.7rem] leading-tight text-fg-muted">{t(m.label)}</div>

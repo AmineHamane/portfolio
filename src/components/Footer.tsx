@@ -3,6 +3,7 @@
 import { ArrowUp, Mail } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { GithubIcon } from "./icons";
+import { BRAND_GRADIENT } from "./ui";
 
 export function Footer() {
   const { ui, site } = useI18n();
@@ -12,11 +13,14 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-5 py-10 sm:flex-row sm:px-8">
         <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-accent">
+          <span
+            className="grid h-9 w-9 place-items-center rounded-lg text-sm font-bold text-white"
+            style={{ backgroundImage: BRAND_GRADIENT }}
+          >
             AH
           </span>
           <div className="text-sm">
-            <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-fg">{site.identity.name}</div>
+            <div className="font-[family-name:var(--font-inter)] font-semibold text-fg">{site.identity.name}</div>
             <div className="text-xs text-fg-dim">
               © {year} · {ui("rights")}
             </div>

@@ -10,6 +10,7 @@ import { SectionHeading } from "./SectionHeading";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectModal } from "./ProjectModal";
 import { TechFootprint } from "./TechFootprint";
+import { BRAND_GRADIENT } from "./ui";
 
 type Filter = "all" | ProjectCategory;
 
@@ -43,9 +44,10 @@ export function Projects() {
             className={cn(
               "rounded-full border px-4 py-1.5 text-sm font-medium transition-all",
               filter === f
-                ? "border-accent/50 bg-accent/15 text-accent"
-                : "border-border bg-surface/50 text-fg-muted hover:border-accent/30 hover:text-fg",
+                ? "border-transparent text-white"
+                : "border-white/10 bg-white/[0.03] text-fg-muted hover:bg-white/[0.07] hover:text-fg",
             )}
+            style={filter === f ? { backgroundImage: BRAND_GRADIENT } : undefined}
           >
             {f === "all" ? ui("filterAll") : ui(CATEGORY_UI[f])}
           </button>

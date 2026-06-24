@@ -1,42 +1,29 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
 import { ArrowUpRight, Star } from "lucide-react";
 import type { Project } from "@/content/types";
 import { useI18n } from "@/lib/i18n";
 import { accentA, accentHex } from "@/lib/accent";
 import { CATEGORY_UI, STATUS_UI } from "@/lib/projectMeta";
 import { PipelineDiagram } from "./PipelineDiagram";
+import { TiltGlowCard } from "./TiltGlowCard";
 import { GithubIcon } from "./icons";
 
 export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () => void }) {
   const { t, tl, ui } = useI18n();
-  const reduce = useReducedMotion();
   const hex = accentHex(project.accent);
   const featured = project.featured && project.category === "flagship";
   const skills = tl(project.skillsShown);
 
   return (
-    <motion.article
-      layout
-      initial={{ opacity: 0, y: reduce ? 0 : 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: reduce ? 0.3 : 0.5 }}
-      className="card card-hover group relative flex flex-col overflow-hidden p-6"
-    >
+    <TiltGlowCard accent={hex} className="flex h-full flex-col p-6">
       {/* accent top line */}
       <span
-        className="absolute inset-x-0 top-0 h-px opacity-60"
+        className="absolute inset-x-0 top-0 h-px opacity-70"
         style={{ background: `linear-gradient(90deg, transparent, ${hex}, transparent)` }}
       />
-      {/* corner glow */}
-      <span
-        className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
-        style={{ background: accentA(project.accent, 0.25) }}
-      />
 
-      {/* Stretched, accessible open trigger covering the whole card. */}
+      {/* Stretched, accessible open trigger covering the card. */}
       <button
         type="button"
         onClick={onOpen}
@@ -48,12 +35,12 @@ export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () 
         <div className="flex items-center gap-2">
           <span
             className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-[family-name:var(--font-jetbrains-mono)] text-[0.65rem] uppercase tracking-wide"
-            style={{ background: accentA(project.accent, 0.12), color: hex }}
+            style={{ background: accentA(project.accent, 0.14), color: hex }}
           >
             {ui(CATEGORY_UI[project.category])}
           </span>
           {featured && (
-            <span className="inline-flex items-center gap-1 rounded-full border border-border px-2.5 py-1 text-[0.65rem] font-medium text-fg-muted">
+            <span className="inline-flex items-center gap-1 rounded-full border border-white/10 px-2.5 py-1 text-[0.65rem] font-medium text-fg-muted">
               <Star className="h-3 w-3" style={{ color: hex }} />
               {ui("featured")}
             </span>
@@ -65,9 +52,7 @@ export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () 
         </span>
       </div>
 
-      <h3 className="relative mt-4 font-[family-name:var(--font-space-grotesk)] text-xl font-semibold tracking-tight text-fg sm:text-2xl">
-        {project.name}
-      </h3>
+      <h3 className="relative mt-4 text-xl font-semibold tracking-tight text-fg sm:text-2xl">{project.name}</h3>
       <p className="relative mt-2 text-sm leading-relaxed text-fg-muted">{t(project.tagline)}</p>
 
       {featured && project.pipeline && (
@@ -89,7 +74,7 @@ export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () 
         )}
       </div>
 
-      <div className="relative mt-6 flex items-center justify-between border-t border-border pt-4">
+      <div className="relative mt-6 flex items-center justify-between border-t border-white/[0.06] pt-4">
         <span className="text-xs text-fg-muted">
           {skills.length} {ui("skillsWord")}
         </span>
@@ -102,7 +87,7 @@ export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () 
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${project.name} — GitHub`}
-                className="relative z-[2] grid h-8 w-8 place-items-center rounded-lg text-fg-muted transition-colors hover:bg-surface hover:text-fg"
+                className="relative z-[2] grid h-8 w-8 place-items-center rounded-lg text-fg-muted transition-colors hover:bg-white/[0.06] hover:text-fg"
               >
                 <GithubIcon className="h-4 w-4" />
               </a>
@@ -117,6 +102,6 @@ export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () 
           </span>
         </div>
       </div>
-    </motion.article>
+    </TiltGlowCard>
   );
 }
