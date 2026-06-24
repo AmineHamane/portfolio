@@ -449,7 +449,7 @@ export const site: SiteContent = {
       },
       metrics: [],
       repoPath: "Amazon NLP Reviews",
-      links: [{ label: "GitHub", href: GITHUB_URL, kind: "github" }],
+      links: [{ label: "GitHub", href: "https://github.com/AmineHamane/Amazon-NLP-reviews", kind: "github" }],
     },
 
     {
