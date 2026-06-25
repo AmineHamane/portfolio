@@ -507,11 +507,6 @@ export const site: SiteContent = {
       repoPath: "jd-market",
       links: [
         {
-          label: "GitHub",
-          href: "https://github.com/AmineHamane/jd-market",
-          kind: "github"
-        },
-        {
           label: "Live site",
           href: "https://jdmarket.cc",
           kind: "demo"
