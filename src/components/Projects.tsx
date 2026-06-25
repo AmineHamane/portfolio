@@ -20,7 +20,7 @@ export function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
 
   const categories = useMemo(() => {
-    const order: ProjectCategory[] = ["flagship", "web-app", "nlp", "data-engineering", "ml", "coursework"];
+    const order: ProjectCategory[] = ["flagship", "fullstack", "ml", "nlp", "data-engineering", "automation", "web-app", "coursework"];
     const present = new Set(site.projects.map((p) => p.category));
     return order.filter((c) => present.has(c));
   }, [site.projects]);

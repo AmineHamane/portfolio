@@ -167,8 +167,16 @@ export default function CVPage() {
               <div className="space-y-3">
                 {cvProjects.map((p) => (
                   <div key={p.id} className="cv-avoid-break">
-                    <h3 className="text-[0.84rem] font-bold text-slate-900">{p.name}</h3>
-                    <p className="text-[0.78rem] leading-snug text-slate-700">{t(p.tagline)}</p>
+                    <div className="flex items-baseline justify-between gap-3">
+                      <h3 className="text-[0.84rem] font-bold text-slate-900">{p.name}</h3>
+                      {p.period && <span className="shrink-0 text-[0.7rem] font-medium text-slate-500">{p.period}</span>}
+                    </div>
+                    {p.role && (
+                      <div className="text-[0.74rem] font-medium" style={{ color: INK }}>
+                        {t(p.role)}
+                      </div>
+                    )}
+                    <p className="mt-0.5 text-[0.78rem] leading-snug text-slate-700">{t(p.tagline)}</p>
                     <p className="mt-0.5 text-[0.7rem] leading-snug text-slate-500">{p.techStack.slice(0, 8).join(" · ")}</p>
                   </div>
                 ))}

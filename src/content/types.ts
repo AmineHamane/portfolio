@@ -10,9 +10,11 @@ export type Accent = "cyan" | "lime" | "purple" | "pink";
 export type ProjectCategory =
   | "flagship"
   | "ml"
+  | "fullstack"
   | "data-engineering"
   | "web-app"
   | "nlp"
+  | "automation"
   | "coursework";
 
 export type ProjectStatus =
@@ -36,6 +38,10 @@ export type Project = {
   status: ProjectStatus;
   featured: boolean;
   accent: Accent;
+  /** Display period, e.g. "2025 — Present". */
+  period?: string;
+  /** Role held, e.g. "Full-Stack Developer". */
+  role?: LS;
   tagline: LS;
   summary: LS;
   problem: LS;

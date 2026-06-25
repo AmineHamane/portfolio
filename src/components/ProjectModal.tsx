@@ -122,6 +122,13 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
               <h3 className="mt-2 font-[family-name:var(--font-inter)] text-2xl font-bold tracking-tight">
                 {project.name}
               </h3>
+              {(project.role || project.period) && (
+                <p className="mt-1 text-xs text-fg-muted">
+                  {project.role ? t(project.role) : ""}
+                  {project.role && project.period ? " · " : ""}
+                  {project.period ?? ""}
+                </p>
+              )}
             </div>
             <button
               ref={closeRef}

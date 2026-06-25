@@ -46,10 +46,15 @@ export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () 
             </span>
           )}
         </div>
-        <span className="flex items-center gap-1.5 font-[family-name:var(--font-jetbrains-mono)] text-[0.65rem] text-fg-muted">
-          <span className="h-1.5 w-1.5 rounded-full" style={{ background: hex }} />
-          {ui(STATUS_UI[project.status])}
-        </span>
+        <div className="flex flex-col items-end gap-1">
+          <span className="flex items-center gap-1.5 font-[family-name:var(--font-jetbrains-mono)] text-[0.65rem] text-fg-muted">
+            <span className="h-1.5 w-1.5 rounded-full" style={{ background: hex }} />
+            {ui(STATUS_UI[project.status])}
+          </span>
+          {project.period && (
+            <span className="font-[family-name:var(--font-jetbrains-mono)] text-[0.62rem] text-fg-dim">{project.period}</span>
+          )}
+        </div>
       </div>
 
       <h3 className="relative mt-4 text-xl font-semibold tracking-tight text-fg sm:text-2xl">{project.name}</h3>

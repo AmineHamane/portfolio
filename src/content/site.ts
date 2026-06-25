@@ -35,6 +35,7 @@ export const site: SiteContent = {
     },
     rotatingRoles: [
       { en: "Python Developer", fr: "Développeur Python" },
+      { en: "Full-Stack Developer", fr: "Développeur Full-Stack" },
       { en: "Machine Learning Engineer", fr: "Ingénieur Machine Learning" },
       { en: "Data Scientist", fr: "Data Scientist" },
       { en: "Generative AI Builder", fr: "Créateur d'IA générative" },
@@ -47,310 +48,475 @@ export const site: SiteContent = {
   about: {
     heading: { en: "From notebook to production", fr: "Du notebook à la production" },
     body: {
-      en: "I'm a Python developer with over five years of IT experience, focused on data science, machine learning, and generative AI. I build complete systems rather than isolated notebooks — collecting and engineering data, training models in PyTorch and Scikit-Learn, and shipping them behind FastAPI, Flask, and Django backends. My flagship work is an end-to-end EUR/USD trading research system that runs the full lifecycle, from historical data collection through Temporal Fusion Transformer training to live, broker-API execution with real risk management. Backed by a Data Science diploma and a strong systems and automation background, I bring both the modeling depth and the engineering discipline to take ML from prototype to something that runs.",
-      fr: "Je suis développeur Python avec plus de cinq ans d'expérience en TI, spécialisé en science des données, machine learning et IA générative. Je construis des systèmes complets plutôt que des notebooks isolés : collecte et ingénierie des données, entraînement de modèles avec PyTorch et Scikit-Learn, puis mise en service derrière des backends FastAPI, Flask et Django. Mon projet phare est un système de recherche de trading EUR/USD de bout en bout, couvrant tout le cycle de vie — de la collecte de données historiques à l'entraînement de Temporal Fusion Transformers, jusqu'à l'exécution en direct via l'API d'un courtier avec une vraie gestion du risque. Fort d'un diplôme en science des données et d'un solide bagage en systèmes et automatisation, j'apporte à la fois la profondeur de modélisation et la rigueur d'ingénierie nécessaires pour mener le ML du prototype à un système qui tourne.",
-    },
+        en: "I'm a Python developer who builds complete systems end-to-end — data pipelines, Python and API services, and the web and mobile interfaces on top of them with React/TypeScript and Expo/React Native — along with the automation that keeps everything running in production. That delivery focus is backed by 5+ years in IT, including an IT Operations foundation covering monitoring, log analysis, testing, security basics, documentation and deployment. My flagship freelance project is an AI trading prototype combining data pipelines, anomaly detection and deep learning, and I'm currently shipping JD Market, a live full-stack SaaS. I work fluently in French and professional English across Québec teams.",
+        fr: "Je suis un développeur Python qui construit des systèmes complets de bout en bout — pipelines de données, services Python et API, et les interfaces web et mobiles qui s'appuient dessus avec React/TypeScript et Expo/React Native — ainsi que l'automatisation qui maintient le tout en production. Cette orientation livraison repose sur plus de 5 ans en TI, dont un socle en Opérations TI couvrant la surveillance, l'analyse de journaux, les tests, les bases de la sécurité, la documentation et le déploiement. Mon projet phare en freelance est un prototype de trading IA mêlant pipelines de données, détection d'anomalies et apprentissage profond, et je livre actuellement JD Market, un SaaS full-stack en production. Je travaille couramment en français et en anglais professionnel au sein d'équipes québécoises."
+      },
   },
 
   stats: [
     { label: { en: "Years in IT", fr: "Années en TI" }, value: "5+" },
-    { label: { en: "Projects", fr: "Projets" }, value: "5" },
+    { label: { en: "Projects", fr: "Projets" }, value: "6" },
     { label: { en: "Core skill areas", fr: "Domaines clés" }, value: "3" },
     { label: { en: "Certifications", fr: "Certifications" }, value: "4" },
   ],
 
   skillGroups: [
     {
-      name: { en: "Data Science & ML", fr: "Data Science & ML" },
+      name: {
+        en: "Data Science & ML",
+        fr: "Science des données & ML"
+      },
       icon: "brain",
       blurb: {
-        en: "From statistics and feature engineering to deep learning with PyTorch.",
-        fr: "Des statistiques et du feature engineering au deep learning avec PyTorch.",
+        en: "Building reliable models from messy real-world data — from feature engineering and validation to classification, time-series and NLP, including the anomaly-detection and deep-learning work behind my AI trading prototype.",
+        fr: "Construire des modèles fiables à partir de données réelles imparfaites — de l'ingénierie de variables à la validation, jusqu'à la classification, les séries temporelles et le TAL, incluant la détection d'anomalies et l'apprentissage profond derrière mon prototype de trading IA."
       },
       skills: [
-        "Python", "Pandas", "NumPy", "Scikit-Learn", "Model validation", "Classification",
-        "Regression", "Clustering", "Time-series forecasting", "NLP", "Embeddings",
-        "Feature engineering", "PyTorch", "PyTorch Lightning", "CNN / RNN / Transformers",
-      ],
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-Learn",
+        "Feature engineering",
+        "Model validation",
+        "Classification",
+        "Regression",
+        "Clustering",
+        "Time-series",
+        "NLP",
+        "Embeddings",
+        "Anomaly detection / Isolation Forest",
+        "PyTorch",
+        "PyTorch Lightning"
+      ]
     },
     {
-      name: { en: "AI Services & Backend", fr: "Services IA & Backend" },
+      name: {
+        en: "Web, Mobile & AI Services",
+        fr: "Web, Mobile & Services IA"
+      },
       icon: "server",
       blurb: {
-        en: "Shipping models and LLM workflows behind clean, async APIs.",
-        fr: "Mise en service de modèles et de workflows LLM derrière des API propres et asynchrones.",
+        en: "Shipping complete products end-to-end: Python APIs and async workers on the backend, React/TypeScript and Expo/React Native on the front, wired to LLM and AI services for features users actually touch.",
+        fr: "Livrer des produits complets de bout en bout : APIs Python et workers asynchrones côté serveur, React/TypeScript et Expo/React Native côté client, branchés à des services LLM et IA pour des fonctionnalités réellement utilisées."
       },
       skills: [
-        "FastAPI", "Flask", "Django", "REST APIs", "Async workers", "LLM / AI services",
-        "OpenAI", "Claude", "Gemini", "Prompt engineering", "Workflow integration", "Streamlit",
-      ],
+        "FastAPI",
+        "Flask",
+        "Django",
+        "REST APIs",
+        "React",
+        "TypeScript",
+        "Vite",
+        "Expo / React Native",
+        "Async workers",
+        "LLM / AI services",
+        "OpenAI",
+        "Claude",
+        "Gemini",
+        "Prompt engineering",
+        "Streamlit"
+      ]
     },
     {
-      name: { en: "Data, DevOps & Systems", fr: "Data, DevOps & Systèmes" },
+      name: {
+        en: "Data, DevOps & Systems",
+        fr: "Données, DevOps & Systèmes"
+      },
       icon: "database",
       blurb: {
-        en: "Pipelines, containers, and cloud — with a sysadmin's operational eye.",
-        fr: "Pipelines, conteneurs et cloud — avec l'œil opérationnel d'un administrateur système.",
+        en: "Moving data and code into production safely: SQL and warehouses, tested and containerized services, infrastructure-as-code, and the operations background to keep them running on Linux, Windows Server and the cloud.",
+        fr: "Amener données et code en production de façon sûre : SQL et entrepôts de données, services testés et conteneurisés, infrastructure-as-code, et le bagage opérationnel pour les maintenir sur Linux, Windows Server et le cloud."
       },
       skills: [
-        "SQL", "Stored procedures", "PostgreSQL", "Snowflake / BigQuery", "PySpark", "Git",
-        "pytest", "Docker", "Terraform", "Linux / Unix", "Windows Server", "Azure / AWS",
-      ],
-    },
+        "SQL",
+        "Stored procedures",
+        "PostgreSQL",
+        "Snowflake / BigQuery",
+        "PySpark",
+        "Git",
+        "pytest",
+        "Docker",
+        "Terraform",
+        "Linux / Unix",
+        "Windows Server",
+        "Azure / AWS"
+      ]
+    }
   ],
 
   projects: [
     {
       id: "forex-algo-trader",
-      name: "EUR/USD AI Trading System",
+      name: "AI Trading System",
       category: "flagship",
       status: "prototype",
       featured: true,
       accent: "cyan",
+      period: "Oct–Nov 2025",
+      role: {
+        en: "Python Developer / ML Engineer (Freelance)",
+        fr: "Développeur Python / ML Engineer (Freelance)"
+      },
       tagline: {
-        en: "A deep-learning forex forecaster wired into a live OANDA trading bot, technical-analysis engine, and real-time decision dashboard.",
-        fr: "Un prévisionniste forex en deep learning relié à un bot de trading OANDA en direct, un moteur d'analyse technique et un tableau de bord décisionnel en temps réel.",
+        en: "A decision-support prototype that turns a private trading client's daily market checks into one explainable Buy/Sell/Hold dashboard.",
+        fr: "Un prototype d'aide à la décision qui transforme les vérifications de marché quotidiennes d'un client privé en un tableau de bord Acheter/Vendre/Conserver explicable."
       },
       summary: {
-        en: "An end-to-end algorithmic-trading research project for EUR/USD that spans the full pipeline: bulk historical candle collection from the OANDA v3 API, technical feature engineering (Bollinger Bands, ATR, RSI, MACD, EMAs, candlestick patterns), Temporal Fusion Transformer models trained with PyTorch Lightning to predict next-bar returns, an AI decision engine that fuses the model prediction with per-indicator Buy/Sell/Hold confidence scores, and a rule-based live bot that executes trades on an OANDA practice account with fixed-cash-risk position sizing.",
-        fr: "Un projet de recherche en trading algorithmique pour l'EUR/USD couvrant tout le pipeline : collecte massive de chandelles historiques via l'API OANDA v3, ingénierie de features techniques (bandes de Bollinger, ATR, RSI, MACD, EMA, patterns de chandeliers), modèles Temporal Fusion Transformer entraînés avec PyTorch Lightning pour prédire le rendement de la prochaine barre, un moteur de décision IA qui fusionne la prédiction du modèle avec des scores de confiance Achat/Vente/Neutre par indicateur, et un bot en direct qui exécute des trades sur un compte de pratique OANDA avec un dimensionnement de position à risque monétaire fixe.",
+        en: "Freelance engagement for a private finance/trading client. I built an end-to-end prototype that automates the client's daily routine of manual market checks for EUR/USD: it collects historical and live candles via the OANDA API, engineers technical-indicator and pattern features, runs a Temporal Fusion Transformer (PyTorch Lightning) to forecast the next-bar move, and fuses that forecast with per-indicator votes into a single, transparent signal surfaced in a Streamlit dashboard. It is an advisory tool — the model powers an explainable dashboard to help the client structure decisions; it does not place live trades autonomously.",
+        fr: "Mandat freelance pour un client privé en finance/trading. J'ai construit un prototype de bout en bout qui automatise la routine quotidienne du client de vérifications manuelles de marché sur l'EUR/USD : il collecte des chandelles historiques et en temps réel via l'API OANDA, calcule des features d'indicateurs techniques et de patterns, exécute un Temporal Fusion Transformer (PyTorch Lightning) pour prévoir le prochain mouvement, puis fusionne cette prévision avec des votes par indicateur en un signal unique et transparent affiché dans un tableau de bord Streamlit. C'est un outil d'aide à la décision — le modèle alimente un tableau de bord explicable pour aider le client à structurer ses décisions ; il ne place pas de transactions de façon autonome."
       },
       problem: {
-        en: "Forecasting short-horizon EUR/USD direction is noisy, and most retail indicators are used in isolation. This project combines a learned sequence model (TFT) with classical technical analysis and session/news context into a single, explainable trade signal — backed by an automatically executing live bot.",
-        fr: "Prévoir la direction de l'EUR/USD à court terme est bruité, et la plupart des indicateurs grand public sont utilisés isolément. Ce projet combine un modèle de séquence appris (TFT) avec l'analyse technique classique et le contexte session/actualités en un seul signal de trading explicable — appuyé par un bot d'exécution automatique en direct.",
+        en: "The client was running their EUR/USD trading process by hand every day: pulling candles, eyeballing indicators across timeframes, weighing candlestick patterns, and checking session liquidity and news windows before deciding Buy, Sell, or Hold. The process was slow, hard to reproduce, and gave no consolidated, defensible rationale behind a given call.",
+        fr: "Le client menait son processus de trading EUR/USD à la main chaque jour : extraire les chandelles, examiner les indicateurs sur plusieurs horizons, juger les patterns en chandeliers, et vérifier la liquidité de session et les fenêtres de nouvelles avant de décider Acheter, Vendre ou Conserver. Le processus était lent, difficile à reproduire et ne fournissait aucune justification consolidée et défendable derrière une décision donnée."
       },
       approach: {
-        en: "Two complementary tracks. (1) A live rule-based bot polls OANDA every 10 seconds, detects newly completed candles, computes Bollinger Bands, and fires mean-reversion entries subject to spread and gain filters, with take-profit/stop-loss from a configurable risk:reward and units sized so a stop-out loses a fixed cash amount. (2) An AI/ML track collects ~8 years of M5/H1/H4 candles, engineers indicator, EMA, pattern and time features, trains Temporal Fusion Transformers to predict next-bar log-return, then fuses the prediction with indicator confirmation and candlestick votes into a blended confidence, surfaced live in a Streamlit dashboard.",
-        fr: "Deux pistes complémentaires. (1) Un bot basé sur des règles interroge OANDA toutes les 10 secondes, détecte les nouvelles chandelles complétées, calcule les bandes de Bollinger et déclenche des entrées de retour à la moyenne selon des filtres d'écart et de gain, avec take-profit/stop-loss issus d'un ratio risque:rendement configurable et un nombre d'unités calculé pour qu'un stop coûte un montant fixe. (2) Une piste IA/ML collecte ~8 ans de chandelles M5/H1/H4, construit des features d'indicateurs, d'EMA, de patterns et de temps, entraîne des Temporal Fusion Transformers pour prédire le log-rendement de la prochaine barre, puis fusionne la prédiction avec la confirmation des indicateurs et le vote des chandeliers en une confiance combinée, affichée en direct dans un tableau de bord Streamlit.",
+        en: "I designed the system as a decision-support pipeline rather than an autopilot. Data collection and feature engineering were made reproducible in pandas/NumPy; a Temporal Fusion Transformer was trained to predict the next-bar log-return; and an explainable decision engine fuses the model prediction with a per-indicator Buy/Sell/Hold confidence table and separately scored candlestick patterns into one capped global confidence. Every output is interpretable — the client can see exactly which indicators and patterns drove the signal, plus session-quality and news-window context, instead of a black-box number.",
+        fr: "J'ai conçu le système comme un pipeline d'aide à la décision plutôt qu'un pilote automatique. La collecte de données et le feature engineering ont été rendus reproductibles en pandas/NumPy ; un Temporal Fusion Transformer a été entraîné à prévoir le log-rendement de la prochaine barre ; et un moteur de décision explicable fusionne la prédiction du modèle avec une table de confiance Acheter/Vendre/Conserver par indicateur et des patterns en chandeliers notés séparément en une confiance globale plafonnée. Chaque sortie est interprétable — le client voit exactement quels indicateurs et patterns ont produit le signal, avec le contexte de qualité de session et de fenêtres de nouvelles, au lieu d'un score boîte noire."
       },
       architecture: {
-        en: "A layered, separation-of-concerns design. An OANDA REST v3 wrapper exposes candle dataframes, pricing with home-currency conversion, and market orders with TP/SL. An infrastructure layer handles bulk paged collection to datasets and instrument metadata. A technicals layer holds vectorized pandas indicators and a candlestick-pattern engine. Thin dataclasses model trades and settings. The bot orchestrates the live loop — new-candle detection, signal build, risk sizing, duplicate-position guard, order placement. The AI decision engine loads a TFT checkpoint, builds a one-step dataset from live candles, predicts, and fuses with indicators, patterns and trend. Streamlit is the presentation layer; a separate module backtests a moving-average crossover.",
-        fr: "Une conception en couches, à responsabilités séparées. Un wrapper OANDA REST v3 expose les chandelles en dataframes, le pricing avec conversion vers la devise de base, et les ordres au marché avec TP/SL. Une couche infrastructure gère la collecte paginée massive vers des jeux de données et les métadonnées d'instruments. Une couche technique contient des indicateurs pandas vectorisés et un moteur de patterns de chandeliers. De fines dataclasses modélisent les trades et les paramètres. Le bot orchestre la boucle en direct — détection de nouvelle chandelle, construction du signal, dimensionnement du risque, garde anti-doublon, placement d'ordre. Le moteur de décision IA charge un checkpoint TFT, construit un jeu de données à un pas depuis les chandelles en direct, prédit et fusionne avec indicateurs, patterns et tendance. Streamlit est la couche de présentation ; un module distinct backteste un croisement de moyennes mobiles.",
+        en: "A modular Python codebase: an OANDA REST v3 wrapper for candles and pricing; an infrastructure layer for bulk paged historical collection; vectorized pandas technical indicators (Bollinger, ATR, RSI, MACD, EMA) and candlestick-pattern detection; a TFT inference core that loads a PyTorch Lightning checkpoint, builds a one-step dataset and predicts; an AI decision engine that fuses model output with indicator and pattern votes; and a Streamlit dashboard with Plotly charts, trading-session coloring, and economic-news awareness. Several architectures (TFT at H1/H4/M5, Transformer, ConvLSTM, ConvBiLSTM, CNN) were explored during research.",
+        fr: "Un code Python modulaire : un wrapper OANDA REST v3 pour les chandelles et les prix ; une couche d'infrastructure pour la collecte historique paginée en masse ; des indicateurs techniques pandas vectorisés (Bollinger, ATR, RSI, MACD, EMA) et la détection de patterns en chandeliers ; un cœur d'inférence TFT qui charge un checkpoint PyTorch Lightning, construit un jeu de données à un pas et prédit ; un moteur de décision IA qui fusionne la sortie du modèle avec les votes d'indicateurs et de patterns ; et un tableau de bord Streamlit avec graphiques Plotly, coloration des sessions de trading et prise en compte des nouvelles économiques. Plusieurs architectures (TFT en H1/H4/M5, Transformer, ConvLSTM, ConvBiLSTM, CNN) ont été explorées durant la recherche."
       },
       outcome: {
-        en: "A working live practice-account bot (Bollinger mean reversion) and a working live AI dashboard (TFT + indicator/pattern fusion) both run, backed by a real multi-year dataset and many trained checkpoints — demonstrating the full ML-to-execution lifecycle on real market data and a real broker API. It is an ambitious solo prototype: the live bot and the model/dashboard are still two parallel tracks, and there is no automated backtest of the model's profitability.",
-        fr: "Un bot en direct fonctionnel sur compte de pratique (retour à la moyenne Bollinger) et un tableau de bord IA en direct (TFT + fusion indicateurs/patterns) tournent tous deux, appuyés par un vrai jeu de données pluriannuel et de nombreux checkpoints entraînés — démontrant tout le cycle du ML à l'exécution sur de vraies données de marché et une vraie API de courtier. C'est un prototype ambitieux mené en solo : le bot en direct et le modèle/tableau de bord restent deux pistes parallèles, et il n'existe pas de backtest automatisé de la rentabilité du modèle.",
+        en: "Delivered a working prototype that consolidates the client's manual daily checks into a single live dashboard, with an explainable signal the client can audit indicator by indicator. The model produces an advisory Buy/Sell/Hold view with confidence; it runs against an OANDA practice account and does not execute live trades on its own. Reported model checkpoint numbers are validation losses, not profitability — the prototype does not include a profitability backtest of the signal.",
+        fr: "Livré un prototype fonctionnel qui consolide les vérifications quotidiennes manuelles du client en un seul tableau de bord en direct, avec un signal explicable auditable indicateur par indicateur. Le modèle produit une vue consultative Acheter/Vendre/Conserver avec confiance ; il fonctionne sur un compte OANDA practice et n'exécute pas de transactions de lui-même. Les valeurs de checkpoint rapportées sont des pertes de validation, pas de la rentabilité — le prototype n'inclut pas de backtest de rentabilité du signal."
       },
       recruiterPitch: {
-        en: "Shows a developer who can take a deep-learning time-series model from data collection, through PyTorch Lightning training, to live API-integrated execution with real risk management — the rare full-stack ML-engineering-meets-quant skill set.",
-        fr: "Montre un développeur capable de mener un modèle de séries temporelles en deep learning de la collecte de données à l'entraînement avec PyTorch Lightning, jusqu'à l'exécution en direct intégrée par API avec une vraie gestion du risque — la rare combinaison ingénierie ML et quant.",
+        en: "A real freelance engagement showing I can scope a problem with a paying client and ship an end-to-end ML system: data engineering, deep-learning forecasting with a Temporal Fusion Transformer, an explainable decision layer, and a clean Streamlit interface — all built with honest framing as decision support rather than overclaimed automated profits.",
+        fr: "Un véritable mandat freelance montrant que je peux cadrer un problème avec un client payant et livrer un système ML de bout en bout : ingénierie de données, prévision par apprentissage profond avec un Temporal Fusion Transformer, une couche de décision explicable et une interface Streamlit soignée — le tout présenté honnêtement comme une aide à la décision plutôt qu'une promesse de profits automatisés."
       },
       techStack: [
-        "Python", "PyTorch", "PyTorch Lightning", "pytorch-forecasting (TFT)", "pandas",
-        "NumPy", "Streamlit", "Plotly", "OANDA REST API v3", "requests", "Jupyter",
+        "Python",
+        "Pandas",
+        "NumPy",
+        "PyTorch",
+        "PyTorch Lightning",
+        "Temporal Fusion Transformer",
+        "pytorch-forecasting",
+        "Streamlit",
+        "Plotly",
+        "OANDA API"
       ],
       skillsShown: {
         en: [
-          "Deep learning for time series (Temporal Fusion Transformers)",
-          "PyTorch Lightning training & checkpointing",
-          "Time-series feature engineering & windowing",
-          "Financial technical analysis (Bollinger, ATR, RSI, MACD, EMA, patterns)",
-          "REST API integration (OANDA v3: candles, pricing, orders)",
-          "Real-time / event-driven system design",
-          "Risk management & position sizing",
-          "Interactive dashboard development (Streamlit + Plotly)",
-          "Clean modular Python architecture",
-          "Backtesting / simulation",
+          "Client scoping and freelance delivery",
+          "End-to-end ML pipeline design",
+          "Time-series forecasting (deep learning)",
+          "Feature engineering for financial data",
+          "Explainable / interpretable ML",
+          "Data dashboards and visualization",
+          "REST API integration",
+          "Honest scoping and communication"
         ],
         fr: [
-          "Deep learning pour séries temporelles (Temporal Fusion Transformers)",
-          "Entraînement & checkpointing avec PyTorch Lightning",
-          "Feature engineering & fenêtrage de séries temporelles",
-          "Analyse technique financière (Bollinger, ATR, RSI, MACD, EMA, patterns)",
-          "Intégration d'API REST (OANDA v3 : chandelles, pricing, ordres)",
-          "Conception de systèmes temps réel / événementiels",
-          "Gestion du risque & dimensionnement de position",
-          "Développement de tableaux de bord interactifs (Streamlit + Plotly)",
-          "Architecture Python modulaire et propre",
-          "Backtesting / simulation",
-        ],
+          "Cadrage client et livraison en freelance",
+          "Conception de pipeline ML de bout en bout",
+          "Prévision de séries temporelles (apprentissage profond)",
+          "Feature engineering pour données financières",
+          "ML explicable / interprétable",
+          "Tableaux de bord et visualisation de données",
+          "Intégration d'API REST",
+          "Cadrage et communication honnêtes"
+        ]
       },
       features: {
         en: [
-          "OANDA v3 wrapper: candle dataframes, pricing with home conversion, market orders with TP/SL",
-          "Bulk historical collection across 7 currencies and M5/H1/H4 (2016–2024)",
-          "Vectorized indicators: Bollinger Bands, ATR, RSI, MACD, Keltner Channels, EMAs",
-          "Candlestick pattern engine (Engulfing, Morning/Evening Star, Shooting Star, and more)",
-          "Temporal Fusion Transformer next-bar return forecasting loaded live from a checkpoint",
-          "AI decision engine fusing model prediction with per-indicator Buy/Sell/Hold confidence",
-          "RSI-vs-price divergence detector, EMA-stack trend classifier, round-level S/R estimate",
-          "Live rule-based bot: 10s polling, new-candle detection, Bollinger mean-reversion entries",
-          "Fixed-cash-risk position sizing converting stop distance in pips into units",
-          "Streamlit dashboard: live signal, session coloring, news-window warnings, auto-refresh",
+          "Automated collection of historical and live EUR/USD candles via the OANDA API",
+          "Vectorized technical indicators (Bollinger, ATR, RSI, MACD, EMA) and candlestick-pattern detection",
+          "Temporal Fusion Transformer forecasting the next-bar move",
+          "Explainable decision engine fusing model prediction with per-indicator Buy/Sell/Hold votes",
+          "Live Streamlit dashboard with Plotly charts, session coloring, and news-window awareness",
+          "Configurable thresholds, encoder length, and timeframe from the dashboard sidebar"
         ],
         fr: [
-          "Wrapper OANDA v3 : chandelles en dataframes, pricing avec conversion, ordres au marché avec TP/SL",
-          "Collecte historique massive sur 7 devises et M5/H1/H4 (2016–2024)",
-          "Indicateurs vectorisés : bandes de Bollinger, ATR, RSI, MACD, canaux de Keltner, EMA",
-          "Moteur de patterns de chandeliers (Engulfing, étoile du matin/soir, étoile filante, etc.)",
-          "Prévision du rendement de la prochaine barre par Temporal Fusion Transformer chargé en direct",
-          "Moteur de décision IA fusionnant la prédiction avec une confiance Achat/Vente/Neutre par indicateur",
-          "Détecteur de divergence RSI/prix, classifieur de tendance par pile d'EMA, estimation des S/R ronds",
-          "Bot en direct : interrogation 10 s, détection de nouvelle chandelle, entrées Bollinger",
-          "Dimensionnement à risque monétaire fixe convertissant la distance de stop en pips en unités",
-          "Tableau de bord Streamlit : signal en direct, coloration de session, alertes actualités, auto-refresh",
-        ],
+          "Collecte automatisée de chandelles EUR/USD historiques et en direct via l'API OANDA",
+          "Indicateurs techniques vectorisés (Bollinger, ATR, RSI, MACD, EMA) et détection de patterns en chandeliers",
+          "Temporal Fusion Transformer prévoyant le prochain mouvement de barre",
+          "Moteur de décision explicable fusionnant la prédiction du modèle avec des votes Acheter/Vendre/Conserver par indicateur",
+          "Tableau de bord Streamlit en direct avec graphiques Plotly, coloration de session et prise en compte des fenêtres de nouvelles",
+          "Seuils, longueur d'encodeur et horizon configurables depuis la barre latérale du tableau de bord"
+        ]
       },
       highlights: {
         en: [
-          "Genuinely end-to-end: data collection → feature engineering → TFT training → inference → signal fusion → live order execution → dashboard.",
-          "Explainable AI design: every indicator contributes a transparent Buy/Sell/Hold confidence row, patterns are scored separately, then blended into a capped global confidence.",
-          "Risk-first execution: units are derived backwards from a fixed cash risk and the stop distance, using OANDA pip-location and home-currency conversion — not fixed lot sizes.",
-          "Real experimentation breadth: multiple architectures attempted (TFT at H1/H4/M5, transformer, ConvLSTM, ConvBiLSTM, CNN), including a multi-horizon transfer experiment.",
-          "Context awareness most retail bots skip: trading-session quality and economic-news windows down-weight confidence.",
+          "Explainable by design: a transparent confidence table where each indicator and pattern contributes its own vote",
+          "Decision-support framing — the model advises, it does not autonomously place live trades",
+          "Built and delivered for a real private finance/trading client as a freelance engagement",
+          "Explored multiple architectures (TFT at H1/H4/M5, Transformer, ConvLSTM, ConvBiLSTM, CNN)"
         ],
         fr: [
-          "Réellement de bout en bout : collecte → feature engineering → entraînement TFT → inférence → fusion de signaux → exécution d'ordres en direct → tableau de bord.",
-          "IA explicable : chaque indicateur fournit une ligne de confiance Achat/Vente/Neutre transparente, les patterns sont notés séparément, puis fusionnés en une confiance globale plafonnée.",
-          "Exécution axée risque : les unités sont déduites à rebours d'un risque monétaire fixe et de la distance de stop, via la pip-location OANDA et la conversion de devise — pas des lots fixes.",
-          "Vraie ampleur d'expérimentation : plusieurs architectures testées (TFT en H1/H4/M5, transformer, ConvLSTM, ConvBiLSTM, CNN), dont un transfert multi-horizon.",
-          "Conscience du contexte que la plupart des bots ignorent : la qualité de session et les fenêtres d'actualités économiques réduisent la confiance.",
-        ],
+          "Explicable par conception : une table de confiance transparente où chaque indicateur et pattern apporte son propre vote",
+          "Cadrage en aide à la décision — le modèle conseille, il ne place pas de transactions de façon autonome",
+          "Construit et livré pour un véritable client privé en finance/trading dans le cadre d'un mandat freelance",
+          "Exploration de plusieurs architectures (TFT en H1/H4/M5, Transformer, ConvLSTM, ConvBiLSTM, CNN)"
+        ]
       },
-      metrics: [
-        {
-          label: { en: "Best TFT H1 val. loss", fr: "Meilleure perte val. TFT H1" },
-          value: "0.000680",
-          note: {
-            en: "A regression loss on tiny log-returns — not a profitability figure.",
-            fr: "Une perte de régression sur de minuscules log-rendements — pas une mesure de rentabilité.",
-          },
-        },
-        { label: { en: "Historical span", fr: "Période historique" }, value: "2016–2024" },
-        {
-          label: { en: "Architectures explored", fr: "Architectures explorées" },
-          value: "5",
-          note: { en: "TFT, Transformer, ConvLSTM, ConvBiLSTM, CNN", fr: "TFT, Transformer, ConvLSTM, ConvBiLSTM, CNN" },
-        },
-        { label: { en: "Bot poll interval", fr: "Intervalle du bot" }, value: "10s" },
-      ],
+      metrics: [],
       pipeline: [
         {
-          label: { en: "Data Collection", fr: "Collecte de données" },
-          desc: { en: "OANDA v3 API · ~8 yrs of M5/H1/H4 candles", fr: "API OANDA v3 · ~8 ans de chandelles M5/H1/H4" },
+          label: {
+            en: "Data Collection",
+            fr: "Collecte de données"
+          },
+          desc: {
+            en: "Pull historical and live EUR/USD candles across timeframes via the OANDA REST API, with bulk paged collection for several years of history.",
+            fr: "Récupérer des chandelles EUR/USD historiques et en direct sur plusieurs horizons via l'API REST OANDA, avec une collecte paginée en masse pour plusieurs années d'historique."
+          }
         },
         {
-          label: { en: "Feature Engineering", fr: "Ingénierie de features" },
-          desc: { en: "Bollinger, ATR, RSI, MACD, EMAs, patterns, time", fr: "Bollinger, ATR, RSI, MACD, EMA, patterns, temps" },
+          label: {
+            en: "Feature Engineering",
+            fr: "Feature Engineering"
+          },
+          desc: {
+            en: "Compute vectorized technical indicators (Bollinger, ATR, RSI, MACD, EMA), EMA-stack trend, candlestick patterns, and time features in pandas/NumPy.",
+            fr: "Calculer des indicateurs techniques vectorisés (Bollinger, ATR, RSI, MACD, EMA), la tendance de la pile d'EMA, les patterns en chandeliers et des features temporelles en pandas/NumPy."
+          }
         },
         {
-          label: { en: "TFT Model", fr: "Modèle TFT" },
-          desc: { en: "Temporal Fusion Transformer · PyTorch Lightning", fr: "Temporal Fusion Transformer · PyTorch Lightning" },
+          label: {
+            en: "TFT Model",
+            fr: "Modèle TFT"
+          },
+          desc: {
+            en: "Run a Temporal Fusion Transformer (PyTorch Lightning) to forecast the next-bar log-return; checkpoint numbers are validation losses, not profitability.",
+            fr: "Exécuter un Temporal Fusion Transformer (PyTorch Lightning) pour prévoir le log-rendement de la prochaine barre ; les valeurs de checkpoint sont des pertes de validation, pas de la rentabilité."
+          }
         },
         {
-          label: { en: "Decision Engine", fr: "Moteur de décision" },
-          desc: { en: "Fuse prediction + indicator confidence + patterns", fr: "Fusion prédiction + confiance indicateurs + patterns" },
+          label: {
+            en: "Decision Engine (explainable signals)",
+            fr: "Moteur de décision (signaux explicables)"
+          },
+          desc: {
+            en: "Fuse the model prediction with a per-indicator Buy/Sell/Hold confidence table and separately scored patterns into one capped, interpretable global signal.",
+            fr: "Fusionner la prédiction du modèle avec une table de confiance Acheter/Vendre/Conserver par indicateur et des patterns notés séparément en un signal global plafonné et interprétable."
+          }
         },
         {
-          label: { en: "Risk & Execution", fr: "Risque & Exécution" },
-          desc: { en: "Fixed-cash-risk sizing · live OANDA orders", fr: "Dimensionnement à risque fixe · ordres OANDA en direct" },
+          label: {
+            en: "Risk & Execution context",
+            fr: "Contexte de risque et d'exécution"
+          },
+          desc: {
+            en: "Add trading-session quality coloring and economic-news windows as context so the client weighs signals appropriately — advisory only, no autonomous live trading.",
+            fr: "Ajouter la coloration de qualité des sessions de trading et les fenêtres de nouvelles économiques comme contexte pour que le client pondère les signaux correctement — consultatif uniquement, sans trading autonome en direct."
+          }
         },
         {
-          label: { en: "Live Dashboard", fr: "Tableau de bord" },
-          desc: { en: "Streamlit · session quality · news windows", fr: "Streamlit · qualité de session · fenêtres d'actualités" },
-        },
+          label: {
+            en: "Live Dashboard",
+            fr: "Tableau de bord en direct"
+          },
+          desc: {
+            en: "Surface the signal, confidence, indicator breakdown, patterns, and Plotly price chart in a Streamlit dashboard the client uses for daily decisions.",
+            fr: "Afficher le signal, la confiance, le détail des indicateurs, les patterns et le graphique de prix Plotly dans un tableau de bord Streamlit que le client utilise pour ses décisions quotidiennes."
+          }
+        }
       ],
       repoPath: "Forex_algo/code",
-      links: [{ label: "GitHub", href: "https://github.com/AmineHamane/forex-ai-trading", kind: "github" }],
+      links: [
+        {
+          label: "GitHub",
+          href: "https://github.com/AmineHamane/forex-ai-trading",
+          kind: "github"
+        }
+      ]
     },
 
     {
       id: "jd-market-v2",
       name: "JD Market v2",
-      category: "web-app",
-      status: "prototype",
+      category: "fullstack",
+      status: "production",
       featured: true,
       accent: "purple",
+      period: "2025 — Present",
+      role: {
+        en: "Full-Stack Python Developer · Web & Mobile",
+        fr: "Développeur full-stack Python · Web & Mobile"
+      },
       tagline: {
-        en: "A SaaS platform for marketplace research & monitoring, built on a Python microservices backend.",
-        fr: "Une plateforme SaaS de recherche et de surveillance de marketplace, bâtie sur un backend microservices Python.",
+        en: "A live marketplace-monitoring SaaS that scores new listings with AI and alerts you in seconds — so you reach the seller first.",
+        fr: "Un SaaS de veille de marketplace en production qui évalue les nouvelles annonces avec l'IA et vous alerte en quelques secondes — pour contacter le vendeur en premier."
       },
       summary: {
-        en: "JD Market v2 is a SaaS platform for marketplace research and monitoring, built on a Python microservices architecture. A Django gateway fronts a set of FastAPI services, with a dedicated scheduler/worker tier handling scraping and background jobs, data APIs serving collected information, and a notification system alerting users on changes. Containerized with Docker and backed by PostgreSQL and Redis, with pytest coverage and GitHub Actions CI.",
-        fr: "JD Market v2 est une plateforme SaaS de recherche et de surveillance de marketplace, bâtie sur une architecture microservices Python. Une passerelle Django expose un ensemble de services FastAPI, avec une couche scheduler/worker dédiée au scraping et aux tâches de fond, des API de données et un système de notifications qui alerte les utilisateurs lors de changements. Conteneurisée avec Docker, appuyée par PostgreSQL et Redis, avec couverture pytest et CI GitHub Actions.",
+        en: "JD Market is a solo-built, production SaaS (live at jdmarket.cc) that continuously watches Facebook Marketplace, scores each new listing with AI against the user's rules, and pushes instant alerts (e.g. Telegram) so the user can act before anyone else. It spans a Django API gateway, FastAPI services, a scheduler/worker for orchestration, scraping and storage helpers, a local desktop agent, a React/TypeScript web app, and an Expo/React Native mobile app — all containerized and shipped through Docker Compose and GitHub Actions.",
+        fr: "JD Market est un SaaS en production conçu en solo (en ligne sur jdmarket.cc) qui surveille en continu Facebook Marketplace, évalue chaque nouvelle annonce avec l'IA selon les règles de l'utilisateur et envoie des alertes instantanées (ex. Telegram) afin d'agir avant tout le monde. Il réunit une passerelle d'API Django, des services FastAPI, un scheduler/worker d'orchestration, des utilitaires de scraping et de stockage, un agent local de bureau, une application web React/TypeScript et une application mobile Expo/React Native — le tout conteneurisé et déployé via Docker Compose et GitHub Actions."
       },
       problem: {
-        en: "Monitoring online marketplaces requires continuously collecting data from external sources, processing it reliably in the background, and exposing it through clean APIs while keeping components independently deployable and testable.",
-        fr: "Surveiller des marketplaces en ligne exige de collecter en continu des données externes, de les traiter de façon fiable en arrière-plan et de les exposer via des API propres, tout en gardant des composants déployables et testables indépendamment.",
+        en: "On fast-moving marketplaces, the best deals disappear within minutes — by the time a buyer notices a relevant listing and evaluates it, the seller is already gone. Manually refreshing search pages is slow, noisy, and impossible to keep up around the clock.",
+        fr: "Sur des marketplaces qui bougent vite, les meilleures aubaines disparaissent en quelques minutes — le temps qu'un acheteur repère une annonce pertinente et l'évalue, le vendeur a déjà répondu à quelqu'un d'autre. Rafraîchir manuellement les pages de recherche est lent, bruyant et impossible à tenir en continu."
       },
       approach: {
-        en: "Designed a multi-service system with clear separation of concerns: a Django gateway as entry point, FastAPI microservices for data APIs, and a scheduler/worker tier for asynchronous scraping. Used PostgreSQL for persistence and Redis for caching and task coordination, added a notification layer, containerized everything with Docker, and wired up pytest and GitHub Actions for testing and CI.",
-        fr: "Conception d'un système multi-services à responsabilités claires : une passerelle Django en point d'entrée, des microservices FastAPI pour les API de données, et une couche scheduler/worker pour le scraping asynchrone. PostgreSQL pour la persistance et Redis pour le cache et la coordination des tâches, une couche de notifications, le tout conteneurisé avec Docker, et pytest + GitHub Actions pour les tests et la CI.",
+        en: "I designed a research-and-monitoring platform around a clear separation of concerns: a Django gateway fronts authentication and the public API, FastAPI services handle the data and scoring workloads, and a scheduler/worker drives periodic ingestion. New listings are pulled in via scraping/storage helpers (with a local desktop agent for sources that need a real session), scored by AI, and matched against each user's saved rules. When a listing clears the threshold, the user gets an instant push notification. I built the React/TypeScript web client and contributed to the Expo/React Native mobile app so users get the same search, saved rules, alerts, and notifications on web and phone.",
+        fr: "J'ai conçu une plateforme de veille autour d'une séparation claire des responsabilités : une passerelle Django gère l'authentification et l'API publique, des services FastAPI portent les charges de données et de scoring, et un scheduler/worker pilote l'ingestion périodique. Les nouvelles annonces sont récupérées via des utilitaires de scraping/stockage (avec un agent local de bureau pour les sources nécessitant une vraie session), évaluées par l'IA, puis confrontées aux règles enregistrées de chaque utilisateur. Lorsqu'une annonce dépasse le seuil, l'utilisateur reçoit une notification instantanée. J'ai développé le client web React/TypeScript et contribué à l'application mobile Expo/React Native pour offrir la même recherche, les mêmes règles, alertes et notifications sur le web et le téléphone."
       },
       architecture: {
-        en: "A Django gateway routes requests to FastAPI microservices; a scheduler/worker tier runs scraping and background jobs coordinated through Redis; PostgreSQL provides durable storage; a notification service emits alerts; all components run as Docker containers with pytest and GitHub Actions for testing and CI.",
-        fr: "Une passerelle Django route les requêtes vers des microservices FastAPI ; une couche scheduler/worker exécute le scraping et les tâches de fond coordonnées par Redis ; PostgreSQL assure le stockage durable ; un service de notifications émet des alertes ; tous les composants tournent en conteneurs Docker avec pytest et GitHub Actions.",
+        en: "Service-oriented backend: a Django API gateway, FastAPI data and scoring services, and a scheduler/worker for job orchestration, backed by PostgreSQL for persistence and Redis for queues and caching. Scraping and storage helpers feed the pipeline, and a local/desktop agent extends ingestion to session-bound sources. The web frontend is React + TypeScript built with Vite; the mobile app is Expo/React Native. Everything runs under Docker Compose with health checks and structured logs, tested with pytest, and deployed through GitHub Actions with deployment docs.",
+        fr: "Backend orienté services : une passerelle d'API Django, des services FastAPI de données et de scoring, et un scheduler/worker pour l'orchestration des tâches, le tout appuyé par PostgreSQL pour la persistance et Redis pour les files et le cache. Des utilitaires de scraping et de stockage alimentent le pipeline, et un agent local/de bureau étend l'ingestion aux sources liées à une session. Le frontend web est React + TypeScript bâti avec Vite ; l'application mobile est Expo/React Native. Tout s'exécute sous Docker Compose avec health checks et logs structurés, est testé avec pytest et déployé via GitHub Actions, avec une documentation de déploiement."
       },
       outcome: {
-        en: "A containerized, multi-service platform that ingests marketplace data on a schedule, serves it through dedicated APIs, and notifies on changes, with an automated test suite and CI pipeline supporting iterative development.",
-        fr: "Une plateforme conteneurisée multi-services qui ingère des données de marketplace selon un calendrier, les sert via des API dédiées et notifie les changements, avec une suite de tests automatisés et une CI soutenant le développement itératif.",
+        en: "JD Market is live in production at jdmarket.cc as the candidate's own product: a working end-to-end pipeline from continuous ingestion to AI scoring to second-scale alerts, delivered across both a web app and a mobile app. As a solo build it covers the full lifecycle — architecture, backend services, two frontends, containerization, CI, and deployment.",
+        fr: "JD Market est en production sur jdmarket.cc en tant que produit du candidat : un pipeline complet et fonctionnel, de l'ingestion continue au scoring par IA jusqu'aux alertes à l'échelle de la seconde, livré à la fois sur une application web et une application mobile. En tant que projet solo, il couvre tout le cycle de vie — architecture, services backend, deux frontends, conteneurisation, CI et déploiement."
       },
       recruiterPitch: {
-        en: "Demonstrates the ability to architect and ship a real SaaS product end to end — a containerized, multi-service Python backend with microservices, async workers, scraping pipelines, and full CI/CD.",
-        fr: "Démontre la capacité à concevoir et livrer un véritable produit SaaS de bout en bout — un backend Python conteneurisé multi-services avec microservices, workers asynchrones, pipelines de scraping et CI/CD complète.",
+        en: "A solo developer who shipped and operates a real, live full-stack SaaS end to end: Python backend (Django + FastAPI) with job orchestration on PostgreSQL/Redis, a React/TypeScript web app, an Expo/React Native mobile app, AI-based scoring, and a Dockerized deployment with CI. JD Market shows ownership across the entire stack — from architecture and data pipelines to two production clients and DevOps.",
+        fr: "Un développeur solo qui a livré et opère un véritable SaaS full-stack en production, de bout en bout : backend Python (Django + FastAPI) avec orchestration de tâches sur PostgreSQL/Redis, application web React/TypeScript, application mobile Expo/React Native, scoring par IA et déploiement conteneurisé avec CI. JD Market démontre une appropriation de toute la stack — de l'architecture et des pipelines de données jusqu'à deux clients en production et au DevOps."
       },
-      pipeline: [
-        {
-          label: { en: "API Gateway", fr: "Passerelle API" },
-          desc: { en: "Django · auth, routing, entry point", fr: "Django · auth, routage, point d'entrée" },
-        },
-        {
-          label: { en: "Microservices", fr: "Microservices" },
-          desc: { en: "FastAPI data services", fr: "Services de données FastAPI" },
-        },
-        {
-          label: { en: "Async Workers", fr: "Workers async" },
-          desc: { en: "Scheduler + scraping jobs", fr: "Scheduler + tâches de scraping" },
-        },
-        {
-          label: { en: "Data Layer", fr: "Couche données" },
-          desc: { en: "PostgreSQL + Redis", fr: "PostgreSQL + Redis" },
-        },
-        {
-          label: { en: "Notify & Ship", fr: "Alertes & Livraison" },
-          desc: { en: "Alerts · Docker · GitHub Actions CI", fr: "Alertes · Docker · CI GitHub Actions" },
-        },
+      techStack: [
+        "Python",
+        "Django",
+        "FastAPI",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "Docker Compose",
+        "nginx",
+        "React",
+        "TypeScript",
+        "Vite",
+        "Expo",
+        "React Native",
+        "pytest",
+        "GitHub Actions"
       ],
-      techStack: ["Python", "Django", "FastAPI", "PostgreSQL", "Redis", "Docker", "pytest", "GitHub Actions"],
       skillsShown: {
-        en: ["Microservices architecture", "API design", "Async workers & scheduling", "Web scraping", "CI/CD", "Docker containerization", "PostgreSQL", "Redis", "Automated testing"],
-        fr: ["Architecture microservices", "Conception d'API", "Workers asynchrones & planification", "Web scraping", "CI/CD", "Conteneurisation Docker", "PostgreSQL", "Redis", "Tests automatisés"],
+        en: [
+          "Full-stack product ownership (web + mobile)",
+          "Service-oriented backend design (Django + FastAPI)",
+          "Job orchestration with scheduler/worker, PostgreSQL and Redis",
+          "AI-based scoring and rule matching",
+          "Real-time alerts and push notifications",
+          "Scraping and data ingestion pipelines",
+          "React/TypeScript and Expo/React Native development",
+          "Containerization, health checks, and structured logging",
+          "Testing with pytest and CI/CD with GitHub Actions",
+          "Deployment with Docker Compose, nginx, and deployment docs"
+        ],
+        fr: [
+          "Appropriation produit full-stack (web + mobile)",
+          "Conception backend orientée services (Django + FastAPI)",
+          "Orchestration de tâches avec scheduler/worker, PostgreSQL et Redis",
+          "Scoring par IA et correspondance de règles",
+          "Alertes en temps réel et notifications push",
+          "Pipelines de scraping et d'ingestion de données",
+          "Développement React/TypeScript et Expo/React Native",
+          "Conteneurisation, health checks et journalisation structurée",
+          "Tests avec pytest et CI/CD avec GitHub Actions",
+          "Déploiement avec Docker Compose, nginx et documentation de déploiement"
+        ]
       },
       features: {
         en: [
-          "Django gateway fronting multiple FastAPI services",
-          "Scheduler and worker tier for background scraping and jobs",
-          "Data APIs serving collected marketplace information",
-          "Notification system for change alerts",
-          "Dockerized deployment with PostgreSQL and Redis",
-          "Automated pytest suite and GitHub Actions CI pipeline",
+          "Continuous monitoring of new Facebook Marketplace listings",
+          "AI scoring of each listing against user-defined rules",
+          "Saved search rules with configurable criteria",
+          "Instant alerts via channels such as Telegram",
+          "Web app and mobile app with shared search, rules, alerts, and notifications",
+          "Local/desktop agent for session-bound ingestion sources"
         ],
         fr: [
-          "Passerelle Django exposant plusieurs services FastAPI",
-          "Couche scheduler et worker pour le scraping et les tâches de fond",
-          "API de données servant l'information de marketplace collectée",
-          "Système de notifications pour les alertes de changement",
-          "Déploiement dockerisé avec PostgreSQL et Redis",
-          "Suite pytest automatisée et pipeline CI GitHub Actions",
-        ],
+          "Surveillance continue des nouvelles annonces Facebook Marketplace",
+          "Scoring par IA de chaque annonce selon des règles définies par l'utilisateur",
+          "Règles de recherche enregistrées avec critères configurables",
+          "Alertes instantanées via des canaux comme Telegram",
+          "Application web et mobile partageant recherche, règles, alertes et notifications",
+          "Agent local/de bureau pour les sources d'ingestion liées à une session"
+        ]
       },
       highlights: {
         en: [
-          "Microservices split between a Django gateway and FastAPI services for separation of concerns",
-          "Dedicated async scheduler/worker tier decoupling scraping from request handling",
-          "Full containerization with PostgreSQL and Redis as backing services",
-          "CI/CD via GitHub Actions with pytest-based test coverage",
+          "Live, solo-built SaaS running in production at jdmarket.cc",
+          "End-to-end pipeline: ingest → AI score → rule match → second-scale alert",
+          "Two production clients: React/TypeScript web and Expo/React Native mobile",
+          "Service-oriented backend (Django gateway + FastAPI services) with scheduler/worker",
+          "Dockerized with health checks, structured logs, pytest, and GitHub Actions CI"
         ],
         fr: [
-          "Microservices répartis entre une passerelle Django et des services FastAPI",
-          "Couche scheduler/worker asynchrone découplant le scraping du traitement des requêtes",
-          "Conteneurisation complète avec PostgreSQL et Redis comme services d'appui",
-          "CI/CD via GitHub Actions avec couverture de tests pytest",
-        ],
+          "SaaS en production, conçu en solo, en ligne sur jdmarket.cc",
+          "Pipeline de bout en bout : ingestion → scoring IA → correspondance de règles → alerte en quelques secondes",
+          "Deux clients en production : web React/TypeScript et mobile Expo/React Native",
+          "Backend orienté services (passerelle Django + services FastAPI) avec scheduler/worker",
+          "Conteneurisé avec health checks, logs structurés, pytest et CI GitHub Actions"
+        ]
       },
       metrics: [],
-      repoPath: "JD Market v2",
-      links: [{ label: "GitHub", href: GITHUB_URL, kind: "github" }],
+      pipeline: [
+        {
+          label: {
+            en: "Scrape & ingest",
+            fr: "Scraping et ingestion"
+          },
+          desc: {
+            en: "The scheduler/worker periodically pulls new Marketplace listings through scraping and storage helpers, with a local/desktop agent handling session-bound sources.",
+            fr: "Le scheduler/worker récupère périodiquement les nouvelles annonces de Marketplace via les utilitaires de scraping et de stockage, un agent local/de bureau gérant les sources liées à une session."
+          }
+        },
+        {
+          label: {
+            en: "AI scoring",
+            fr: "Scoring par IA"
+          },
+          desc: {
+            en: "Each new listing is scored by AI to estimate how well it matches what the user is looking for.",
+            fr: "Chaque nouvelle annonce est évaluée par l'IA pour estimer son adéquation avec ce que recherche l'utilisateur."
+          }
+        },
+        {
+          label: {
+            en: "Rules & alerts",
+            fr: "Règles et alertes"
+          },
+          desc: {
+            en: "Scores are matched against each user's saved rules; listings that clear the threshold trigger instant alerts (e.g. Telegram) within seconds.",
+            fr: "Les scores sont confrontés aux règles enregistrées de chaque utilisateur ; les annonces qui dépassent le seuil déclenchent des alertes instantanées (ex. Telegram) en quelques secondes."
+          }
+        },
+        {
+          label: {
+            en: "Web & mobile",
+            fr: "Web et mobile"
+          },
+          desc: {
+            en: "Users manage search, saved rules, alerts, and notifications through a React/TypeScript web app and an Expo/React Native mobile app.",
+            fr: "Les utilisateurs gèrent la recherche, les règles enregistrées, les alertes et les notifications via une application web React/TypeScript et une application mobile Expo/React Native."
+          }
+        },
+        {
+          label: {
+            en: "Backend services",
+            fr: "Services backend"
+          },
+          desc: {
+            en: "A Django API gateway fronts FastAPI data and scoring services, backed by PostgreSQL and Redis for persistence, queues, and caching.",
+            fr: "Une passerelle d'API Django pilote les services de données et de scoring FastAPI, appuyés par PostgreSQL et Redis pour la persistance, les files et le cache."
+          }
+        },
+        {
+          label: {
+            en: "Deploy & CI",
+            fr: "Déploiement et CI"
+          },
+          desc: {
+            en: "Everything runs under Docker Compose with nginx, health checks, and structured logs, tested with pytest and shipped through GitHub Actions.",
+            fr: "Tout s'exécute sous Docker Compose avec nginx, health checks et logs structurés, testé avec pytest et déployé via GitHub Actions."
+          }
+        }
+      ],
+      repoPath: "jd-market",
+      links: [
+        {
+          label: "GitHub",
+          href: "https://github.com/AmineHamane/jd-market",
+          kind: "github"
+        },
+        {
+          label: "Live site",
+          href: "https://jdmarket.cc",
+          kind: "demo"
+        }
+      ]
     },
 
     {
@@ -360,6 +526,11 @@ export const site: SiteContent = {
       status: "prototype",
       featured: true,
       accent: "pink",
+      period: "2023",
+      role: {
+        en: "Python Developer / NLP",
+        fr: "Développeur Python / NLP"
+      },
       tagline: {
         en: "An NLP-driven product recommender built on Amazon review sentiment.",
         fr: "Un recommandeur de produits piloté par NLP, basé sur le sentiment des avis Amazon.",
@@ -459,6 +630,11 @@ export const site: SiteContent = {
       status: "coursework",
       featured: false,
       accent: "lime",
+      period: "2023 — 2024",
+      role: {
+        en: "Data Engineer (Hands-On)",
+        fr: "Data Engineer (pratique)"
+      },
       tagline: {
         en: "An end-to-end modern data-engineering stack worked through hands-on: Docker, Postgres, Terraform, Mage, BigQuery, dbt, Spark, Kafka.",
         fr: "Une stack moderne d'ingénierie de données pratiquée à fond : Docker, Postgres, Terraform, Mage, BigQuery, dbt, Spark, Kafka.",
@@ -579,12 +755,174 @@ export const site: SiteContent = {
     },
 
     {
+      id: "groupe-wave",
+      name: "Groupe Wave — CRM Automation",
+      category: "automation",
+      status: "production",
+      featured: false,
+      accent: "lime",
+      period: "2021 — 2022",
+      role: {
+        en: "Python Developer (Freelance)",
+        fr: "Développeur Python (Freelance)"
+      },
+      tagline: {
+        en: "Automated CRM and marketing data workflows for a digital agency",
+        fr: "Automatisation des flux de données CRM et marketing pour une agence numérique"
+      },
+      summary: {
+        en: "A freelance engagement with a digital marketing agency to structure client and campaign data, stand up an internal CRM, and automate the recurring data work behind lead and campaign tracking. Python pipelines handled import, cleaning, transformation, validation, and report generation so the team could rely on consistent, up-to-date numbers instead of manual spreadsheet work.",
+        fr: "Mandat en freelance avec une agence de marketing numérique pour structurer les données clients et campagnes, mettre en place un CRM interne et automatiser le travail récurrent de données derrière le suivi des leads et des campagnes. Des pipelines Python prenaient en charge l'import, le nettoyage, la transformation, la validation et la génération de rapports, afin que l'équipe puisse s'appuyer sur des chiffres cohérents et à jour plutôt que sur un travail manuel dans des tableurs."
+      },
+      problem: {
+        en: "The agency tracked client and campaign data across scattered files and tools, with no single source of truth for leads or marketing results. Reporting was manual, slow, and error-prone, which made it hard to follow campaign performance reliably and to keep client information consistent across the team.",
+        fr: "L'agence suivait les données clients et campagnes à travers des fichiers et outils dispersés, sans source unique de vérité pour les leads ou les résultats marketing. La production de rapports était manuelle, lente et sujette aux erreurs, ce qui rendait difficile le suivi fiable de la performance des campagnes et le maintien de la cohérence des informations clients au sein de l'équipe."
+      },
+      approach: {
+        en: "I worked closely with the agency to map their operational workflows, then built Python and SQL pipelines to ingest data from APIs and files, clean and validate it, and load it into a structured internal CRM. On top of that, I automated the recurring reports the team relied on, replacing repetitive manual steps with scheduled, repeatable processes.",
+        fr: "J'ai travaillé en étroite collaboration avec l'agence pour cartographier ses flux opérationnels, puis j'ai construit des pipelines Python et SQL pour ingérer les données issues d'API et de fichiers, les nettoyer, les valider et les charger dans un CRM interne structuré. Par-dessus, j'ai automatisé les rapports récurrents dont l'équipe dépendait, remplaçant des étapes manuelles répétitives par des processus planifiés et reproductibles."
+      },
+      architecture: {
+        en: "Data flowed from external APIs and uploaded files into Python ingestion scripts built around Pandas for cleaning, transformation, and validation. Cleaned records were stored in a SQL-backed internal CRM, and reporting routines queried that data to generate recurring campaign and lead-tracking reports for the team.",
+        fr: "Les données circulaient depuis des API externes et des fichiers téléversés vers des scripts d'ingestion Python construits autour de Pandas pour le nettoyage, la transformation et la validation. Les enregistrements nettoyés étaient stockés dans un CRM interne adossé à une base SQL, et des routines de reporting interrogeaient ces données pour générer les rapports récurrents de suivi des campagnes et des leads pour l'équipe."
+      },
+      outcome: {
+        en: "The agency gained a structured internal CRM and a set of automated workflows that reduced manual data handling and made recurring reports faster and more consistent. Lead and campaign tracking became more reliable, giving the team dependable numbers to act on without re-keying data by hand.",
+        fr: "L'agence a obtenu un CRM interne structuré et un ensemble de flux automatisés qui ont réduit la manipulation manuelle des données et rendu les rapports récurrents plus rapides et plus cohérents. Le suivi des leads et des campagnes est devenu plus fiable, donnant à l'équipe des chiffres solides sur lesquels agir sans ressaisir les données à la main."
+      },
+      recruiterPitch: {
+        en: "A real-world freelance data engagement: I turned scattered client and campaign data into a structured internal CRM and automated the reporting around it. It shows I can scope operational needs with a non-technical team and deliver practical Python and SQL automation that saves time and improves data quality.",
+        fr: "Un mandat freelance de données concret : j'ai transformé des données clients et campagnes dispersées en un CRM interne structuré et automatisé le reporting qui l'entoure. Cela montre que je sais cadrer des besoins opérationnels avec une équipe non technique et livrer une automatisation Python et SQL pragmatique qui fait gagner du temps et améliore la qualité des données."
+      },
+      techStack: [
+        "Python",
+        "SQL",
+        "Pandas",
+        "REST APIs",
+        "Data Cleaning",
+        "Reporting Automation"
+      ],
+      skillsShown: {
+        en: [
+          "Data pipeline design and automation",
+          "Data cleaning and validation with Pandas",
+          "API and file-based data ingestion",
+          "SQL data modeling for an internal CRM",
+          "Automated reporting",
+          "Working with a non-technical agency team"
+        ],
+        fr: [
+          "Conception et automatisation de pipelines de données",
+          "Nettoyage et validation des données avec Pandas",
+          "Ingestion de données via API et fichiers",
+          "Modélisation SQL des données pour un CRM interne",
+          "Reporting automatisé",
+          "Collaboration avec une équipe d'agence non technique"
+        ]
+      },
+      features: {
+        en: [
+          "Automated import of client and campaign data from APIs and files",
+          "Cleaning, transformation, and validation pipelines built on Pandas",
+          "Structured internal CRM backed by SQL",
+          "Automated generation of recurring marketing and lead-tracking reports",
+          "Improved consistency of client and campaign data across the team"
+        ],
+        fr: [
+          "Import automatisé des données clients et campagnes depuis des API et des fichiers",
+          "Pipelines de nettoyage, transformation et validation basés sur Pandas",
+          "CRM interne structuré adossé à une base SQL",
+          "Génération automatisée des rapports récurrents de marketing et de suivi des leads",
+          "Cohérence améliorée des données clients et campagnes au sein de l'équipe"
+        ]
+      },
+      highlights: {
+        en: [
+          "Replaced manual spreadsheet work with repeatable automated data workflows",
+          "Stood up an internal CRM as a single source of truth for client and campaign data",
+          "Automated recurring reporting to support lead and campaign tracking"
+        ],
+        fr: [
+          "Remplacement du travail manuel dans des tableurs par des flux de données automatisés et reproductibles",
+          "Mise en place d'un CRM interne comme source unique de vérité pour les données clients et campagnes",
+          "Automatisation du reporting récurrent pour soutenir le suivi des leads et des campagnes"
+        ]
+      },
+      metrics: [],
+      pipeline: [
+        {
+          label: {
+            en: "Ingest (APIs & files)",
+            fr: "Ingestion (API et fichiers)"
+          },
+          desc: {
+            en: "Pull client and campaign data from external APIs and uploaded files into Python ingestion scripts.",
+            fr: "Récupération des données clients et campagnes depuis des API externes et des fichiers téléversés vers des scripts d'ingestion Python."
+          }
+        },
+        {
+          label: {
+            en: "Clean & Validate",
+            fr: "Nettoyage et validation"
+          },
+          desc: {
+            en: "Standardize, deduplicate, and validate records with Pandas to ensure reliable, consistent data.",
+            fr: "Normalisation, déduplication et validation des enregistrements avec Pandas pour garantir des données fiables et cohérentes."
+          }
+        },
+        {
+          label: {
+            en: "Transform",
+            fr: "Transformation"
+          },
+          desc: {
+            en: "Reshape and enrich the cleaned data into the structure required by the internal CRM and reports.",
+            fr: "Restructuration et enrichissement des données nettoyées dans le format requis par le CRM interne et les rapports."
+          }
+        },
+        {
+          label: {
+            en: "Internal CRM",
+            fr: "CRM interne"
+          },
+          desc: {
+            en: "Load the prepared records into a SQL-backed internal CRM that serves as the single source of truth.",
+            fr: "Chargement des enregistrements préparés dans un CRM interne adossé à SQL servant de source unique de vérité."
+          }
+        },
+        {
+          label: {
+            en: "Automated Reports",
+            fr: "Rapports automatisés"
+          },
+          desc: {
+            en: "Generate recurring marketing and lead-tracking reports automatically from the CRM data.",
+            fr: "Génération automatique des rapports récurrents de marketing et de suivi des leads à partir des données du CRM."
+          }
+        }
+      ],
+      repoPath: "",
+      links: [
+        {
+          label: "Client site",
+          href: "https://groupewave.com/",
+          kind: "external"
+        }
+      ]
+    },
+
+    {
       id: "ds-diploma-portfolio",
       name: "Data Science Diploma Portfolio",
       category: "coursework",
       status: "coursework",
       featured: false,
       accent: "purple",
+      period: "2022 — 2023",
+      role: {
+        en: "Data Science — Learner & Project Owner",
+        fr: "Science des données — Apprenant & porteur de projet"
+      },
       tagline: {
         en: "End-to-end data-science fundamentals, from Python and statistics to neural networks.",
         fr: "Les fondamentaux de la science des données de bout en bout, de Python et des statistiques aux réseaux de neurones.",
@@ -722,24 +1060,31 @@ export const site: SiteContent = {
       },
     },
     {
-      role: { en: "Systems Administrator / IT Operations", fr: "Administrateur systèmes / Opérations TI" },
+      role: {
+        en: "Systems Administrator · IT Operations",
+        fr: "Administrateur de systèmes · Opérations TI"
+      },
       company: "Gildan",
       location: "Montréal, QC",
       period: "Feb 2020 – Oct 2025",
       bullets: {
         en: [
-          "Administered Windows Server, Active Directory, VMware, DNS/DHCP, VPN, and Microsoft 365 environments.",
-          "Automated recurring operational tasks with Python and PowerShell to cut manual effort and speed resolution.",
-          "Built a monitoring and data-comparison automation: hourly snapshots, desync detection, alerts, and reports.",
-          "Diagnosed complex incidents through log analysis and root-cause investigation, coordinating with infra/security.",
+          "Worked within the IT Operations / Operations Center team, collaborating closely with infrastructure, network, security, applications and support groups to keep critical services running.",
+          "Provided level 2/3 support and administered Windows Server, Active Directory, VMware, DNS/DHCP, VPN, Microsoft 365 and a range of internal applications.",
+          "Automated recurring operational tasks with Python and PowerShell — including snapshot comparison, desynchronization detection and automated operational reporting.",
+          "Handled operational monitoring, service continuity and shift handovers, while documenting procedures and tracking recurring incidents to prevent repeats.",
+          "Performed log analysis and diagnosis of complex incidents, coordinating resolution across teams.",
+          "Communicated clearly with technical and business stakeholders throughout incident resolution and change activities."
         ],
         fr: [
-          "Administration d'environnements Windows Server, Active Directory, VMware, DNS/DHCP, VPN et Microsoft 365.",
-          "Automatisation de tâches opérationnelles récurrentes avec Python et PowerShell pour réduire l'effort manuel et accélérer la résolution.",
-          "Mise en place d'une automatisation de surveillance et de comparaison de données : snapshots horaires, détection de désynchronisation, alertes et rapports.",
-          "Diagnostic d'incidents complexes par analyse de logs et recherche de cause racine, en coordination avec infra/sécurité.",
-        ],
-      },
+          "Intégré à l'équipe Opérations TI / Centre d'opérations, en collaboration étroite avec les groupes infrastructure, réseau, sécurité, applications et support pour assurer la disponibilité des services critiques.",
+          "Assuré le support de niveau 2/3 et administré Windows Server, Active Directory, VMware, DNS/DHCP, VPN, Microsoft 365 ainsi que plusieurs applications internes.",
+          "Automatisé des tâches opérationnelles récurrentes en Python et PowerShell — comparaison de snapshots, détection de désynchronisation et production automatisée de rapports opérationnels.",
+          "Pris en charge la surveillance opérationnelle, la continuité de service et les passations de quart, tout en documentant les procédures et en effectuant le suivi des incidents récurrents pour éviter qu'ils ne se reproduisent.",
+          "Réalisé l'analyse de journaux et le diagnostic d'incidents complexes, en coordonnant la résolution entre les équipes.",
+          "Communiqué clairement avec les parties prenantes techniques et d'affaires tout au long de la résolution d'incidents et des activités de changement."
+        ]
+      }
     },
     {
       role: { en: "IT Support Technician", fr: "Technicien support informatique" },
@@ -761,13 +1106,27 @@ export const site: SiteContent = {
 
   education: [
     {
-      degree: { en: "Data Science Diploma", fr: "Diplôme en science des données" },
+      degree: {
+        en: "Data Science Diploma",
+        fr: "Diplôme en science des données"
+      },
       school: "Concordia University",
       detail: {
-        en: "Data analysis, programming, machine learning, data processing, and problem solving.",
-        fr: "Analyse de données, programmation, apprentissage automatique, traitement de données et résolution de problèmes.",
-      },
+        en: "Applied program (2023) covering machine learning, data analysis and Python — the foundation for my data and ML work.",
+        fr: "Programme appliqué (2023) couvrant l'apprentissage automatique, l'analyse de données et Python — le socle de mon travail en données et ML."
+      }
     },
+    {
+      degree: {
+        en: "Collegial Diploma",
+        fr: "Diplôme collégial"
+      },
+      school: "Collège",
+      detail: {
+        en: "General collegial studies (2010).",
+        fr: "Études collégiales générales (2010)."
+      }
+    }
   ],
 
   certifications: [
@@ -783,9 +1142,9 @@ export const site: SiteContent = {
       fr: "Développeur Python · Data Science · Machine Learning · IA générative",
     },
     summary: {
-      en: "Python developer with 5+ years of IT experience specializing in data science, machine learning, and generative AI. Builds complete systems end to end — from data collection and feature engineering to model training in PyTorch and Scikit-Learn and deployment behind FastAPI, Flask, and Django backends. Flagship work includes a full-lifecycle EUR/USD trading research system using Temporal Fusion Transformers wired into a live broker API with risk management, plus microservices platforms, NLP sentiment applications, and hands-on data-engineering pipelines across Docker, Mage, BigQuery, dbt, Spark, and Kafka. Backed by a Data Science diploma and a strong systems and automation background. French native, professional English.",
-      fr: "Développeur Python avec plus de 5 ans d'expérience TI, spécialisé en science des données, machine learning et IA générative. Conçoit des systèmes complets de bout en bout — de la collecte et l'ingénierie des données à l'entraînement de modèles avec PyTorch et Scikit-Learn, jusqu'au déploiement derrière des backends FastAPI, Flask et Django. Réalisations phares : un système de recherche de trading EUR/USD couvrant tout le cycle de vie avec des Temporal Fusion Transformers reliés à une API de courtier en direct et une gestion du risque, des plateformes microservices, des applications NLP de sentiment, et des pipelines d'ingénierie de données pratiques sur Docker, Mage, BigQuery, dbt, Spark et Kafka. Fort d'un diplôme en science des données et d'un solide bagage en systèmes et automatisation. Français natif, anglais professionnel.",
-    },
+        en: "Python developer with 5+ years of IT experience, combining data and ML with full-stack web and mobile development and automation. I build complete systems end-to-end — data pipelines and Python/API services, React/TypeScript and Expo/React Native interfaces, and the operational automation around them — and ship them to production. Backed by an IT Operations foundation (monitoring, log analysis, testing, security basics, documentation, deployment). Native French, professional English.",
+        fr: "Développeur Python avec plus de 5 ans d'expérience en TI, alliant données et ML au développement full-stack web et mobile et à l'automatisation. Je construis des systèmes complets de bout en bout — pipelines de données et services Python/API, interfaces React/TypeScript et Expo/React Native, et l'automatisation opérationnelle qui les entoure — et je les livre en production. Appuyé par un socle en Opérations TI (surveillance, analyse de journaux, tests, bases de la sécurité, documentation, déploiement). Français langue maternelle, anglais professionnel."
+      },
   },
 
   ui: {
@@ -848,9 +1207,11 @@ export const site: SiteContent = {
     filterAll: { en: "All", fr: "Tous" },
     catFlagship: { en: "Flagship", fr: "Projet phare" },
     catMl: { en: "Machine Learning", fr: "Machine Learning" },
+    catFullstack: { en: "Full-Stack / SaaS", fr: "Full-Stack / SaaS" },
     catData: { en: "Data Engineering", fr: "Ingénierie de données" },
     catWeb: { en: "SaaS / Backend", fr: "SaaS / Backend" },
     catNlp: { en: "NLP", fr: "NLP" },
+    catAutomation: { en: "Automation", fr: "Automatisation" },
     catCoursework: { en: "Foundations", fr: "Fondations" },
     backToTop: { en: "Back to top", fr: "Haut de page" },
     skillsWord: { en: "skills", fr: "compétences" },

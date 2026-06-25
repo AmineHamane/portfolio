@@ -13,8 +13,10 @@ export const STATUS_UI: Record<ProjectStatus, string> = {
 export const CATEGORY_UI: Record<ProjectCategory, string> = {
   flagship: "catFlagship",
   ml: "catMl",
+  fullstack: "catFullstack",
   "data-engineering": "catData",
   "web-app": "catWeb",
   nlp: "catNlp",
+  automation: "catAutomation",
   coursework: "catCoursework",
 };
