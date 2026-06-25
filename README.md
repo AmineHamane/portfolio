@@ -2,7 +2,9 @@
 
 A modern, bilingual (EN/FR), animated portfolio for **Amine Hamane** — Python Developer · Data Science · Machine Learning · Generative AI.
 
-Built as a dark "engineer / quant" experience: near-black canvas, cyan/lime data-viz accents, monospace detailing, an animated forecast hero, per-project case studies with skill breakdowns, and a print-ready CV page.
+**🌐 Live:** [amine-hamane.vercel.app](https://amine-hamane.vercel.app)
+
+A premium dark experience: a true-black canvas with a twinkling starfield, an animated purple→pink brand gradient, glassmorphism, 3D tilt-glow project cards, per-project case studies with skill breakdowns, data-viz accents, and a print-ready CV page.
 
 ## Stack
 
